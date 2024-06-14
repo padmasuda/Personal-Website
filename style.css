@@ -6,10 +6,10 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    box-sizing:border-box;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    align-items: center;    
+    align-items: center;
 }
 
 hr {
@@ -69,7 +69,7 @@ a:hover {
     color: #fff;
 }
 
-header{
+header {
     background: linear-gradient(to right, #00FFFF, #8E44AD);
     color: #fff;
     padding: 40px 0;
@@ -77,33 +77,37 @@ header{
     width: 100%;
 }
 
-.header h1{
+.header h1 {
     color: white;
 }
 
-.header p{
-    color:#333;
-    font-size:20px;
+.header p {
+    color: #333;
+    font-size: 20px;
 }
+
 .header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 .header-left, .header-right {
     display: flex;
     align-items: center;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 .header-left .name {
     margin-right: 20px;
     color: black;
-    padding:5px;
+    padding: 5px;
 }
 
 .header-left .resume-button {
     margin-right: 10px;
+    margin-bottom: 10px;
     padding: 10px 20px;
     border-radius: 20px;
     background-color: #007BFF;
@@ -155,7 +159,7 @@ img {
     padding: 10px 15px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    animation:fade-inout 10s infinite alternate;
+    animation: fade-inout 10s infinite alternate;
 }
 
 form {
@@ -202,11 +206,20 @@ form button:hover {
     background-image: linear-gradient(to right, #f9620b, #831bcd);
 }
 
-
-
 @media only screen and (max-width: 768px) {
     .skills-list {
         flex-direction: column; /* Stacks skills vertically on smaller screens */
+    }
+
+    .header-content {
+        flex-direction: column; /* Stacks header content vertically on smaller screens */
+        align-items: center; /* Center-aligns header content */
+    }
+
+    .header-left, .header-right {
+        width: 100%; /* Make header sections full width */
+        justify-content: center; /* Center-align header sections */
+        margin-bottom: px; /* Add spacing between sections */
     }
 }
 
@@ -214,7 +227,7 @@ form button:hover {
     header, footer {
         padding: 15px; /* Adjusts padding for smaller screens */
     }
-
+    
     section, form {
         width: calc(100% - 20px); /* Adjusts width to ensure spacing on very small screens */
         margin: 10px auto;
@@ -230,7 +243,6 @@ form button:hover {
         font-size: 16px; /* Adjusts heading sizes for better readability on small devices */
     }
 }
-
 
 .horizontal-scroll {
     overflow-x: hidden; /* Hide any overflowing content */
@@ -258,11 +270,10 @@ form button:hover {
     }
 }
 
-@keyframes fade-inout{
-    0%{opacity:1;}
-    100%{opacity:0;}
+@keyframes fade-inout {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
 }
-
 
 /* CSS for Dark Mode */
 .dark-mode {
@@ -312,7 +323,6 @@ form button:hover {
     }
 }
 
-
 /* Style for Thumbnails Section */
 #projects {
     display: grid;
@@ -354,23 +364,5 @@ form button:hover {
     background-color: #831bcd;
     color: #fff;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 5px
 }
-
-.thumbnail-content .btn:hover {
-    background-color: #f9620b;
-}
-footer {
-    background: linear-gradient(to right, #00FFFF, #8E44AD);
-    color: #000000;
-    font-weight:bold;
-    padding: 40px 0;
-    text-align: center;
-    width: 100%;
-    box-sizing: border-box;
-    display: block;
-}
-
-
-
-
